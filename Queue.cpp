@@ -8,7 +8,7 @@ private:
     int FRONT, REAR;
     int queue_array[max];
 
-    public:
+public:
     Queues()
     {
         FRONT = -1;
@@ -21,3 +21,10 @@ private:
         cout << "Enter a number: ";
         cin >> num;
         cout << endl;
+
+        // cek apakah antrian penuh
+        if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1))
+        {
+            cout << "\nQueue overflow\n";
+            return;
+        }
